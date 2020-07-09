@@ -93,7 +93,12 @@
             </script>
         @endif
         <!-- /Google Analytics -->
-
+        <style>
+        img[src*="#thumbnail"] {
+               width:150px;
+               height:100px;
+            }
+        </style>
         @foreach (LaRecipe::allScripts() as $name => $path)
             @if (preg_match('/^https?:\/\//', $path))
                 <script src="{{ $path }}"></script>
