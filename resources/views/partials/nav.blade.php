@@ -27,10 +27,6 @@
                 </larecipe-button>
             @endif
 
-            <larecipe-button tag="a" href="https://github.com/saleem-hadad/larecipe" target="__blank" type="black" class="mx-2 px-4">
-                <i class="fab fa-github"></i>
-            </larecipe-button>
-
             {{-- versions dropdown --}}
             <larecipe-dropdown>
                 <larecipe-button type="primary" class="flex">
@@ -57,7 +53,7 @@
                     </larecipe-button>
 
                     <template slot="list">
-                        <form action="/logout" method="POST">
+                        <form action="/backend/logout" method="POST">
                             {{ csrf_field() }}
 
                             <button type="submit" class="py-2 px-4 text-white bg-danger inline-flex"><i class="fa fa-power-off mr-2"></i> Logout</button>
